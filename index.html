@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <head>
+        <!--
+        http://tympanus.net/codrops/2013/07/16/on-scroll-header-effects/
+-->
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    </head>
+    <body>
+        <header class="ha-header">
+            <div class="left-buttons">
+                <b class="circle close"></b>
+                <b class="circle min"></b>
+                <b class="circle max"></b>
+                <a class="btn" id="back"><i class="icon ion-android-arrow-back"></i></a>
+                <a class="btn disabled" id="forward"><i class="icon ion-android-arrow-forward"></i></a>
+                <a class="btn" id="refresh"><i class="icon ion-android-refresh"></i></a>
+            </div>
+            <div class="tabs">
+                <div class="tab current">
+                    <input value="http://www.wikipedia.com"/><i class="icon fav-icon ion-android-wifi"></i> <span class="name">Wikipedia</span><i class="icon ion-android-close"></i>
+                </div></div>
+            <div class="right-buttons">
+
+                <a class="btn pull-right" id="newTab"><i class="icon ion-android-add "></i></a>
+                <a class="btn " id="menu"><i class="icon ion-android-more-vertical"></i></a>
+            </div>
+        </header>
+        <div class="container">
+            <iframe id="iframe" src="http://www.wikipedia.com" scrolling="no">
+                <p>This experiment relies on iframes, which your browser does not support. Sorry.</p>
+            </iframe>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/jquery.jFrame.min.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

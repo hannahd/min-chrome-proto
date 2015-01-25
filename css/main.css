@@ -1,0 +1,230 @@
+body, html{
+    height:100%;
+    background:#333;
+	font-family: 'Helvetica Nueue', Arial, sans-serif;
+    font-size:13px;
+    overflow:hidden
+}
+
+
+iframe:focus {
+    outline: none;
+}
+
+iframe {
+    display: block;
+    width:100%;
+    height:500%;
+    border:0;
+    box-sizing: border-box;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    margin-top: 34px;
+    transition: margin 500ms;
+    overflow:auto;
+}
+
+.ha-header.hidden + .container {
+    margin-top: 0;
+}
+.ha-header {
+    position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	z-index: 50;
+    height:34px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+    border:1px solid rbga(217,217,217,.5);
+    border-radius:5px 5px 0 0;
+    background: rgba(236,236,236,1);
+    background: -moz-linear-gradient(top, rgba(236,236,236,1) 0%, rgba(217,217,217,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(236,236,236,1)), color-stop(100%, rgba(217,217,217,1)));
+    background: -webkit-linear-gradient(top, rgba(236,236,236,1) 0%, rgba(217,217,217,1) 100%);
+    background: -o-linear-gradient(top, rgba(236,236,236,1) 0%, rgba(217,217,217,1) 100%);
+    background: -ms-linear-gradient(top, rgba(236,236,236,1) 0%, rgba(217,217,217,1) 100%);
+    background: linear-gradient(to bottom, rgba(236,236,236,1) 0%, rgba(217,217,217,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#d9d9d9', GradientType=0 );
+    border-bottom:1px solid #b7b7b7;
+    transition: top 500ms;
+     -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ha-header.hidden{
+    top: -34px;
+}
+
+b.circle{
+    margin-right:5px;
+    margin-bottom:2px;
+    background:#d3d3d3;
+    border:1px solid #c7c7c7;
+    border-radius:6px;
+    width:10px;
+    height:10px;
+    display:inline-block;
+}
+b.circle:first-child{
+    margin-left:12px;
+}
+b.circle.close{
+    background:#ff5f5c;
+    border-color:#e64344;
+}
+b.circle.min{
+    background:#ffbb4e;
+    border-color:#e39f42;
+}
+b.circle.max{
+    background:#00c958;
+    border-color:#13ac47;
+}
+
+a.btn{
+    margin-top:4px;
+    margin-right:0px;
+    margin-bottom:5px;
+    border-radius:6px;
+    width:25px;
+    height:25px;
+    text-align:center;
+    display:inline-block;
+    border:1px solid rgba(0,0,0,0);
+    color:#484848;
+    z-index:3;
+}
+a.btn.disabled,
+a.btn.disabled:hover{
+    opacity:.35;
+    border:1px solid rgba(0,0,0,0);
+}
+a.btn:hover{
+    border:1px solid #c7c7c7;
+}
+
+a .icon{
+    font-size:21px;
+    line-height: 27px;
+}
+
+.tab.current{
+    width:50%;
+    background:rgba(0,0,0,.0);
+    padding: 5px;
+}
+
+
+.tab input{
+    display:none;
+    width:0%;
+    transition:width 500ms;
+    padding: 3px 6px;
+    box-sizing: border-box;
+}
+.tab.current input{
+    display:inline-block;
+    width: 96%;
+}
+
+.tab .fav-icon{
+    font-size:16px;
+    margin-right: 4px;
+    display: inline-block;
+}
+.tab.current .fav-icon{
+    display:none;
+}
+.tab.current .name{
+    display:none;
+}
+
+.tab{
+    display:inline-block;
+    width:25%;
+    border-right:1px solid #b7b7b7;
+    height:100%;
+    box-sizing:border-box;
+    height:34px;
+    overflow:hidden;
+    padding: 10px 8px;
+    background:rgba(0,0,0,.08);
+    border-left: 1px solid #DADADA;
+    cursor:default;
+    position:relative;
+    color:#494949;
+    transition: width 500ms;
+    text-overflow: clip;
+    white-space: nowrap
+}
+.tab:first-child{
+    border-left:1px solid #b7b7b7;
+}
+.tab:hover{
+    background:rgba(0,0,0,.0);
+    color:#111;
+}
+
+
+.ion-android-close{
+    position:absolute;
+    right:6px;
+    top:10px;
+    opacity:0;
+    border-radius: 7px;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+}
+
+.tab.current .ion-android-close{
+    opacity:.4;
+}
+
+.tab:hover .ion-android-close{
+    opacity:.4;
+}
+
+.tab .ion-android-close:hover{
+    background:#484848;
+    color:#fff;
+    opacity:.4;
+}
+
+
+.tabs{
+    width:100%;
+    padding:0 70px 0 165px;
+    box-sizing:border-box;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:0;
+    height:34px;
+    overflow:hidden;
+}
+
+.right-buttons a{
+    margin-right:3px;
+}
+.right-buttons{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:3;
+}
+.left-buttons{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:3;
+}
