@@ -44,6 +44,8 @@ $(".tabs").on("keypress", "input", function(e) {
         var new_url = $(this).val();
         if ( new_url !== "" ) {
             iframe.attr('src', new_url);
+            $(".current .name").text(new_url.split(".")[1]);
+
             return false;
         }
     }
@@ -84,8 +86,10 @@ $('#newTab').click(function(){
 });
 
 // Close tab
-$(".tabs").on("click", '.ion-android-close', function(){
+$(".tabs").on("click", '.ion-android-close', function(e){
     var tab = $(this).parent(".tab");
+
+    // Is the closing tab currently selected
     if(tab.hasClass("current")){
         console.log("Close Current Tab");
         tab.remove();
@@ -100,4 +104,18 @@ $(".tabs").on("click", '.ion-android-close', function(){
 
     numTabs--;
     setTabWidth();
+    e.stopPropagation()
 });
+
+// Switch to tab
+$(".tabs").on("click", '.tab', function(){
+    console.log("Switching Tab");
+    $(".current").removeClass("current");
+
+    // Switch to clicked tab
+    $(this).addClass("current");
+    iframe.attr('src', $(".current input").val());
+
+    setTabWidth();
+});
+

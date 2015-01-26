@@ -144,6 +144,11 @@ a .icon{
 .tab.current .fav-icon{
     display:none;
 }
+
+.tab .name{
+    text-transform: capitalize;
+}
+
 .tab.current .name{
     display:none;
 }
