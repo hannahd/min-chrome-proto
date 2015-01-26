@@ -20,8 +20,6 @@
                 <b class="circle min"></b>
                 <b class="circle max"></b>
                 <a class="btn" id="back"><i class="icon ion-android-arrow-back"></i></a>
-                <a class="btn disabled" id="forward"><i class="icon ion-android-arrow-forward"></i></a>
-                <a class="btn" id="refresh"><i class="icon ion-android-refresh"></i></a>
             </div>
             <div class="tabs">
                 <div class="tab current">
@@ -34,14 +32,49 @@
             </div>
         </header>
         <div class="container">
-            <iframe id="iframe" src="http://www.wikipedia.com" scrolling="no">
+            <iframe id="iframe" name="frame" src="http://www.wikipedia.com" scrolling="no">
                 <p>This experiment relies on iframes, which your browser does not support. Sorry.</p>
             </iframe>
         </div>
+        <div class="screen"></div>
+        <div class="menu hidden">
+            <ul>
+                <li class="actions">
+                    <a class="btn disabled" id="forward"><i class="icon ion-android-arrow-forward"></i></a>
+                    <a class="btn" id="refresh"><i class="icon ion-android-refresh"></i></a>
+                    <a class="btn" id="favorite"><i class="icon ion-ios-star-outline"></i></a>
+                </li>
+                <li>New Tab</li>
+                <li>New Window</li>
+                <li>New Incognito Tab</li>
+                <li>Bookmarks</li>
+                <li>Recent tabs</li>
+                <li class="seperator"></li>
+                <li>Save Page As</li>
+                <li>Find</li>
+                <li>Print</li>
+                <li class="seperator"></li>
+                <li>History</li>
+                <li>Downloads</li>
+                <li class="seperator"></li>
+                <li>Settings</li>
+                <li>About Google Chrome</li>
+                <li>Help</li>
+                <li class="seperator"></li>
+                <li>More Tools</li>
+            </ul>
+        </div>
+        <div class="note">
+            <a class="close"><i class="icon ion-ios-arrow-down"></i></a>
+            <h4>Want less browser?</h4>
+            <p>This is a <strong><a href="http://en.wikipedia.org/wiki/Prototype" target="frame">prototype</a></strong> to push the desktop Chrome experience closer to the mobile feel. <strong>Try it out!</strong> Put Chrome into presentation mode <small>(Mac: View menu)</small> for the best effect. Scroll and click. Make a new tab and browse to the <a href="http://www.nytimes.com" target="frame">New York Times</a>.</p>
+            <p>As a prototype, this is not intended to cover all cases, but instead give you a sense of the experience. Sadly, Google and a lot of other popular websites won't work here.</p>
+            <p class="credits">Made with <i class="icon ion-heart"></i> by <a href="https://twitter.com/hannahd_ux" target="_blank">@HannahD_UX</a><br> Feedback and comments are always welcome.<br><a href="https://github.com/hannahd/min-chrome-proto" target="_blank">View Source on Github</a></p>
+        </div>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/jquery.jFrame.min.js"></script>
         <script src="js/main.js"></script>
 
     </body>

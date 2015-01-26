@@ -2,11 +2,12 @@ var lastScrollTop = 0;
 var header = $(".ha-header");
 var visible = true;
 var iframe = $('iframe');
-var numTabs = 1;
+var numTabs = 3;
 var default_url = "https://news.layervault.com/";
 
-var tabTemplate = '<div class="tab current"><input value="'+ default_url +'"/><i class="icon fav-icon ion-social-designernews"></i> <span class="name">Designer News</span><i class="icon ion-android-close"></i></div>';
+var tabTemplate = '<div class="tab current"><input value="' + default_url + '"/><i class="icon fav-icon' + ' ion-android-globe' + '"></i> <span class="name">' + 'Designer News' + '</span><i class="icon ion-android-close"></i></div>';
 
+$(".tabs").append('<div class="tab"><input value="' + 'https://www.android.com/' + '"/><i class="icon fav-icon' + ' ion-social-android' + '"></i> <span class="name">' + 'Android' + '</span><i class="icon ion-android-close"></i></div>'+'<div class="tab"><input value="' + default_url + '"/><i class="icon fav-icon ' + 'ion-social-designernews' + '"></i> <span class="name">' + 'Designer News' + '</span><i class="icon ion-android-close"></i></div>');
 
 function setTabWidth(){
     var newWidth = 100/(numTabs+1);
@@ -85,6 +86,20 @@ $('#newTab').click(function(){
     iframe.attr('src', default_url);
 });
 
+// Menu
+$('#menu').click(function(){
+    console.log("Menu show");
+    $(".screen").show()
+    $(".menu").removeClass("hidden");
+});
+
+$('.menu li, .menu a, .screen').click(function(){
+    console.log("Menu hide");
+    $(".screen").hide();
+    $(".menu").addClass("hidden");
+});
+
+
 // Close tab
 $(".tabs").on("click", '.ion-android-close', function(e){
     var tab = $(this).parent(".tab");
@@ -119,3 +134,9 @@ $(".tabs").on("click", '.tab', function(){
     setTabWidth();
 });
 
+
+
+$(".note .close, .note h4").click(function(){
+    $(".note").toggleClass("collapsed");
+    $(".note i").toggleClass("ion-ios-arrow-down ion-ios-arrow-up");
+});

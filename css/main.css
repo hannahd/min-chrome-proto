@@ -180,7 +180,7 @@ a .icon{
 }
 
 
-.ion-android-close{
+.tab .ion-android-close{
     position:absolute;
     right:6px;
     top:10px;
@@ -208,7 +208,7 @@ a .icon{
 
 .tabs{
     width:100%;
-    padding:0 70px 0 165px;
+    padding:0 70px 0 106px;
     box-sizing:border-box;
     position:absolute;
     top:0;
@@ -232,4 +232,126 @@ a .icon{
     top:0;
     left:0;
     z-index:3;
+}
+
+.menu{
+    background:#fff;
+    position: fixed;
+    top:5px;
+    right:5px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,.4);
+    width:200px;
+    border:1px solid rgba(0, 0, 0,.2);
+    overflow:hidden;
+    transition:width 500ms, opacity 500ms;
+    z-index:55;
+}
+
+.hidden.menu{
+    width:0;
+    opacity:0;
+}
+
+.menu li {
+    cursor: default;
+    line-height: 1.2rem;
+    list-style-type: none;
+    display: block;
+    padding: .8rem 1rem;
+}
+
+.menu li.actions{
+    padding:3px .9rem ;
+    text-align:center;
+}
+
+.menu li.actions a{
+    margin-right:25px;
+}
+
+.menu li.actions a:last-child{
+    margin-right:0;
+}
+
+.menu li.actions:hover{
+    background-color: #fff;
+}
+
+.menu li.seperator{
+    height:1px;
+    border-bottom:1px solid #eaeaea;
+    padding:0;
+    margin:5px 0;
+}
+
+.menu li:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    margin:0;
+}
+
+.screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    z-index:50;
+}
+
+.note{
+    width:270px;
+    background:rgba(155, 89, 182,.8);
+
+    border:1px solid rgba(155, 89, 182,1);
+    color:#fff;
+    position: fixed;
+    bottom:10px;
+    left:10px;
+    z-index:100;
+    padding:20px 20px 10px;
+    font-size:14px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,.4);
+    line-height:1.3em;
+    transition:all 750ms;
+}
+
+.note:hover{
+    background:rgba(155, 89, 182,.95);
+}
+
+.note.collapsed{
+    bottom:-284px;
+}
+
+.note h4{
+    font-size:1.4em;
+    margin:0;
+}
+.note .close{
+    position:absolute;
+    right:17px;
+    top:17px;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.note .credits,
+.note small{
+    font-size:.8em;
+    opacity:.8;
+}
+
+.note a{
+    color:#ffffff;
+    opacity:.8;
+}
+
+.note a:hover{
+    opacity:1;
 }
